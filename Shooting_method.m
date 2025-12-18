@@ -107,8 +107,18 @@ end
 %% plotting
 figure (1)
 hold on
-plot(Waves(:,:)'*(q/30))
-plot(mesh)
+plot(Waves(:,:)'*(1/30))
+plot(mesh/q)
+title('Finite Square Quantum Well Potential Profile')
+xlabel('Position (nm)')
+ylabel('Potential Energy V(x) (eV)')
+grid on
+
+
 hold off
 figure(2)
 plot (energies,error)
+title('Matching Error vs Energy for Bound-State Eigenvalues')
+xlabel('Energy (eV)')
+ylabel('Wavefunction Matching Error')
+grid on
